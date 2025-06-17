@@ -1,42 +1,79 @@
-.login-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background-color: #f0f0f0;
+:root {
+  /* Primary Base Colors */
+  --background: #f0f7f4; /* A very light, clean background, perhaps with a hint of green/blue. Excellent for main content areas. */
+  --foreground: #3c493f; /* A deep, dark, earthy green/grey. Perfect for primary text, icons, and strong borders/dividers. */
+
+  /* Neutral/Secondary Colors */
+  --neutral-light: #b3bfb8; /* A lighter, desaturated green/grey. Ideal for subtle borders, disabled states, secondary text, or backgrounds for less prominent sections. */
+  --neutral-dark: #7e8d85;  /* A mid-tone, slightly darker green/grey. Good for hover states on light elements, subtle shadows, or secondary text that needs a bit more emphasis than --neutral-light. Could also be used for muted icons or borders around more significant elements. */
+
+  /* Accent/Highlight Color */
+  --accent-primary: #a2e3c4; /* A vibrant, fresh light green. Excellent for calls to action (buttons, links), highlighted states, progress indicators, or elements that need to stand out. */
+  --accent-dark: #71b192;
+  /* Semantic Colors (Optional but good practice) */
+  --success: #a2e3c4;      /* (Often same as primary accent, or slightly different) For positive feedback, success messages. */
+  --info: #007bff;          /* Example: A standard blue for informational messages. (You'd pick one that fits your palette) */
+  --warning: #ffc107;       /* Example: A standard orange for warnings. (You'd pick one that fits your palette) */
+  --error: #dc3545;         /* Example: A standard red for errors. (You'd pick one that fits your palette) */
 }
 
-.login-form {
-  display: flex;
-  flex-direction: column;
-  width: 300px;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #fff;
+.container {
+  text-align: center;
+  padding-top: 50px;
 }
 
-.login-form label {
-  margin-bottom: 5px;
+.h1 {
+  text-align: center;
+  font-size: 50px;
+  font-weight: 600;
+  color: var(--foreground);
 }
 
-.login-form input {
-  margin-bottom: 15px;
-  padding: 8px;
-  border: 1px solid #ccc;
+.p {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--foreground);
+  margin-bottom: 20px;
+}
+
+.form {
+  margin: 0 auto;
+  max-width: 400px;
+  background-color: white;
+  padding: 20px 20px;
+  border-radius: 10px;
+  border: 1px solid var(--neutral-dark);
+}
+
+.form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  border: 1px solid var(--neutral-dark);
   border-radius: 4px;
+  color: white;
 }
 
-.login-form button {
-  padding: 10px;
+.form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.form button {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  background-color: var(--accent-primary);
+  color: var(--foreground);
   border: none;
   border-radius: 4px;
-  background-color: #0070f3;
-  color: white;
+  font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
 }
 
-.login-form button:hover {
-  background-color: #005bb5;
+.form button:hover {
+  background-color: var(--accent-dark);
 }

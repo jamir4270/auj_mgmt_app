@@ -1,13 +1,20 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  /* Primary Base Colors */
+  --background: #f0f7f4; /* A very light, clean background, perhaps with a hint of green/blue. Excellent for main content areas. */
+  --foreground: #3c493f; /* A deep, dark, earthy green/grey. Perfect for primary text, icons, and strong borders/dividers. */
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Neutral/Secondary Colors */
+  --neutral-light: #b3bfb8; /* A lighter, desaturated green/grey. Ideal for subtle borders, disabled states, secondary text, or backgrounds for less prominent sections. */
+  --neutral-dark: #7e8d85;  /* A mid-tone, slightly darker green/grey. Good for hover states on light elements, subtle shadows, or secondary text that needs a bit more emphasis than --neutral-light. Could also be used for muted icons or borders around more significant elements. */
+
+  /* Accent/Highlight Color */
+  --accent-primary: #a2e3c4; /* A vibrant, fresh light green. Excellent for calls to action (buttons, links), highlighted states, progress indicators, or elements that need to stand out. */
+  --accent-dark: #71b192;
+  /* Semantic Colors (Optional but good practice) */
+  --success: #a2e3c4;      /* (Often same as primary accent, or slightly different) For positive feedback, success messages. */
+  --info: #007bff;          /* Example: A standard blue for informational messages. (You'd pick one that fits your palette) */
+  --warning: #ffc107;       /* Example: A standard orange for warnings. (You'd pick one that fits your palette) */
+  --error: #dc3545;         /* Example: A standard red for errors. (You'd pick one that fits your palette) */
 }
 
 html,
@@ -20,8 +27,6 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 * {
@@ -31,12 +36,15 @@ body {
 }
 
 a {
-  color: inherit;
+  color: var(--accent-dark);
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+a:hover {
+  color: var(--accent-primary);
 }
+
+a:visited {
+  color: var(--accent-dark);
+}
+
